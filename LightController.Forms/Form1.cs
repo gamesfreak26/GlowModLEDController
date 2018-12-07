@@ -8,8 +8,8 @@ namespace LightController.Forms
 {
     public partial class Form1 : Form
     {
-        private SerialConn _serialConn;
-        string[] _ports;
+        private readonly SerialConn _serialConn;
+        readonly string[] _ports;
         private Color _selectedColour;
 
         public Form1()
@@ -21,15 +21,14 @@ namespace LightController.Forms
             cmbSerialPorts.Items.AddRange(_ports);
         }
 
-
         private void btnChooseColour_Click(object sender, EventArgs e)
         {
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            {
-                var colour = colorDialog1.Color;
-                _selectedColour = colour;
-                picSelectedColour.BackColor = colour;
-            }
+            if (colorDialog1.ShowDialog() != DialogResult.OK)
+                return;
+
+            var colour = colorDialog1.Color;
+            _selectedColour = colour;
+            picSelectedColour.BackColor = colour;
         }
 
         private void btnSendColour_Click(object sender, EventArgs e)
@@ -38,18 +37,21 @@ namespace LightController.Forms
             _serialConn.Write(led);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnConnect_Click(object sender, EventArgs e)
         {
             var selectedItem = (string) cmbSerialPorts.SelectedItem;
-            if (string.IsNullOrWhiteSpace(selectedItem))
+            if (!string.IsNullOrWhiteSpace(selectedItem))
             {
                 _serialConn.Connect(selectedItem, 115200);
+                btnChooseColour.Enabled = true;
+                btnSendColour.Enabled = true;
             }
+        }
+
+        private void cmbSerialPorts_SelectedValueChanged(object sender, EventArgs e)
+        {
+            var selectedItem = (string)cmbSerialPorts.SelectedItem;
+            btnConnect.Enabled = string.IsNullOrWhiteSpace(selectedItem);
         }
     }
 }

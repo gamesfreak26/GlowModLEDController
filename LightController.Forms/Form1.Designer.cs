@@ -39,6 +39,7 @@
             // 
             // btnChooseColour
             // 
+            this.btnChooseColour.Enabled = false;
             this.btnChooseColour.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnChooseColour.Location = new System.Drawing.Point(387, 155);
             this.btnChooseColour.Name = "btnChooseColour";
@@ -59,6 +60,7 @@
             // 
             // btnSendColour
             // 
+            this.btnSendColour.Enabled = false;
             this.btnSendColour.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSendColour.Location = new System.Drawing.Point(387, 248);
             this.btnSendColour.Name = "btnSendColour";
@@ -75,9 +77,11 @@
             this.cmbSerialPorts.Name = "cmbSerialPorts";
             this.cmbSerialPorts.Size = new System.Drawing.Size(196, 33);
             this.cmbSerialPorts.TabIndex = 3;
+            this.cmbSerialPorts.SelectedValueChanged += new System.EventHandler(this.cmbSerialPorts_SelectedValueChanged);
             // 
             // btnConnect
             // 
+            this.btnConnect.Enabled = false;
             this.btnConnect.Location = new System.Drawing.Point(387, 64);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(189, 72);
@@ -98,7 +102,6 @@
             this.Controls.Add(this.btnChooseColour);
             this.Name = "Form1";
             this.Text = "Electra Colour Picker";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picSelectedColour)).EndInit();
             this.ResumeLayout(false);
 
