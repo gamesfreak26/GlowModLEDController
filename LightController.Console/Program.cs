@@ -11,7 +11,7 @@ namespace LightController
 {
     class Program
     {
-        static SerialPort _SerialPort;
+        static SerialPort _serialPort;
         static void Main(string[] args)
         {
             Connect("COM5", 115200);
@@ -40,21 +40,21 @@ namespace LightController
 
         public static void Connect(string port, int baudrate)
         {
-            if (_SerialPort == null) 
-                _SerialPort = new SerialPort(port, baudrate);
+            if (_serialPort == null) 
+                _serialPort = new SerialPort(port, baudrate);
         
-            if (_SerialPort.IsOpen)
-                _SerialPort.Close();
+            if (_serialPort.IsOpen)
+                _serialPort.Close();
 
-            _SerialPort.DtrEnable = true;
-            _SerialPort.Open();
+            _serialPort.DtrEnable = true;
+            _serialPort.Open();
 
         }
 
         public static void SerialWrite(int red, int green, int blue)
         {
-            LEDRGB rgb = new LEDRGB(red, green, blue) ;
-            _SerialPort.Write(rgb.ToString());
+            LedRgb rgb = new LedRgb(red, green, blue) ;
+            _serialPort.Write(rgb.ToString());
         }
     }
 }
