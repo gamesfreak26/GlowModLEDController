@@ -12,8 +12,6 @@ namespace LightController
     class Program
     {
         static SerialPort _SerialPort;
-
-
         static void Main(string[] args)
         {
             Connect("COM5", 115200);
