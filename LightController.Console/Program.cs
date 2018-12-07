@@ -1,20 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.IO.Ports;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using LightController.Common;
 
 namespace LightController
 {
     class Program
     {
-        static SerialPort _serialPort;
         static void Main(string[] args)
         {
-            Connect("COM5", 115200);
+            var serialConn = new SerialConn();
+
+            serialConn.Connect("COM5", 115200);
             var hexRegex = new Regex("/^#[0-9a-f]{3,6}$/i");
 
             while (true)
@@ -34,27 +32,8 @@ namespace LightController
                     .Select(x => int.Parse(x))
                     .ToArray();
 
-                SerialWrite(i[0], i[1], i[2]);
+                serialConn.Write(new LedRgb(i[0], i[1], i[2]));
             }
-        }
-
-        public static void Connect(string port, int baudrate)
-        {
-            if (_serialPort == null) 
-                _serialPort = new SerialPort(port, baudrate);
-        
-            if (_serialPort.IsOpen)
-                _serialPort.Close();
-
-            _serialPort.DtrEnable = true;
-            _serialPort.Open();
-
-        }
-
-        public static void SerialWrite(int red, int green, int blue)
-        {
-            LedRgb rgb = new LedRgb(red, green, blue) ;
-            _serialPort.Write(rgb.ToString());
         }
     }
 }

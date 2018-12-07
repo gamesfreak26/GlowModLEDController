@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightController", "LightController.Console\LightController.csproj", "{2BDC3E69-C186-40B2-A77D-B65BB64BE8B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightController.Common", "..\LightController.Common\LightController.Common.csproj", "{0BD400BC-52D3-4A08-A024-515F7B767791}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightController.Forms", "LightController.Forms\LightController.Forms.csproj", "{745C866E-5A67-4835-891E-566A125432AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2BDC3E69-C186-40B2-A77D-B65BB64BE8B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BDC3E69-C186-40B2-A77D-B65BB64BE8B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BDC3E69-C186-40B2-A77D-B65BB64BE8B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BD400BC-52D3-4A08-A024-515F7B767791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD400BC-52D3-4A08-A024-515F7B767791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD400BC-52D3-4A08-A024-515F7B767791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD400BC-52D3-4A08-A024-515F7B767791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{745C866E-5A67-4835-891E-566A125432AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{745C866E-5A67-4835-891E-566A125432AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{745C866E-5A67-4835-891E-566A125432AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{745C866E-5A67-4835-891E-566A125432AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
