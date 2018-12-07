@@ -46,7 +46,7 @@ namespace LightController.Forms
         private void btnConnect_Click(object sender, EventArgs e)
         {
             var selectedItem = (string) cmbSerialPorts.SelectedItem;
-            if (string.IsNullOrWhiteSpace(selectedItem))
+            if (!string.IsNullOrWhiteSpace(selectedItem))
             {
                 _serialConn.Connect(selectedItem, 115200);
             }
