@@ -80,7 +80,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\LightController.Common\LightController.Common.csproj">
+    <ProjectReference Include="..\LightController.Common\LightController.Common.csproj">
       <Project>{0BD400BC-52D3-4A08-A024-515F7B767791}</Project>
       <Name>LightController.Common</Name>
     </ProjectReference>
