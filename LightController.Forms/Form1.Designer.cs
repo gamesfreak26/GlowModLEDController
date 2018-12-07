@@ -34,7 +34,17 @@
             this.btnSendColour = new System.Windows.Forms.Button();
             this.cmbSerialPorts = new System.Windows.Forms.ComboBox();
             this.btnConnect = new System.Windows.Forms.Button();
+            this.pbPrev1 = new System.Windows.Forms.PictureBox();
+            this.pbPrev2 = new System.Windows.Forms.PictureBox();
+            this.pbPrev3 = new System.Windows.Forms.PictureBox();
+            this.pbPrev4 = new System.Windows.Forms.PictureBox();
+            this.pbPrev5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picSelectedColour)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrev1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrev2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrev3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrev4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrev5)).BeginInit();
             this.SuspendLayout();
             // 
             // btnChooseColour
@@ -90,11 +100,66 @@
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
+            // pbPrev1
+            // 
+            this.pbPrev1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbPrev1.Location = new System.Drawing.Point(13, 343);
+            this.pbPrev1.Name = "pbPrev1";
+            this.pbPrev1.Size = new System.Drawing.Size(93, 95);
+            this.pbPrev1.TabIndex = 5;
+            this.pbPrev1.TabStop = false;
+            this.pbPrev1.Click += new System.EventHandler(this.pbPrev1_Click);
+            // 
+            // pbPrev2
+            // 
+            this.pbPrev2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbPrev2.Location = new System.Drawing.Point(123, 343);
+            this.pbPrev2.Name = "pbPrev2";
+            this.pbPrev2.Size = new System.Drawing.Size(93, 95);
+            this.pbPrev2.TabIndex = 6;
+            this.pbPrev2.TabStop = false;
+            this.pbPrev2.Click += new System.EventHandler(this.pbPrev2_Click);
+            // 
+            // pbPrev3
+            // 
+            this.pbPrev3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbPrev3.Location = new System.Drawing.Point(236, 343);
+            this.pbPrev3.Name = "pbPrev3";
+            this.pbPrev3.Size = new System.Drawing.Size(93, 95);
+            this.pbPrev3.TabIndex = 7;
+            this.pbPrev3.TabStop = false;
+            this.pbPrev3.Click += new System.EventHandler(this.pbPrev3_Click);
+            // 
+            // pbPrev4
+            // 
+            this.pbPrev4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbPrev4.Location = new System.Drawing.Point(347, 343);
+            this.pbPrev4.Name = "pbPrev4";
+            this.pbPrev4.Size = new System.Drawing.Size(93, 95);
+            this.pbPrev4.TabIndex = 8;
+            this.pbPrev4.TabStop = false;
+            this.pbPrev4.Click += new System.EventHandler(this.pbPrev4_Click);
+            // 
+            // pbPrev5
+            // 
+            this.pbPrev5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbPrev5.Location = new System.Drawing.Point(458, 343);
+            this.pbPrev5.Name = "pbPrev5";
+            this.pbPrev5.Size = new System.Drawing.Size(93, 95);
+            this.pbPrev5.TabIndex = 9;
+            this.pbPrev5.TabStop = false;
+            this.pbPrev5.Click += new System.EventHandler(this.pbPrev5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbPrev5);
+            this.Controls.Add(this.pbPrev4);
+            this.Controls.Add(this.pbPrev3);
+            this.Controls.Add(this.pbPrev2);
+            this.Controls.Add(this.pbPrev1);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.cmbSerialPorts);
             this.Controls.Add(this.btnSendColour);
@@ -103,6 +168,11 @@
             this.Name = "Form1";
             this.Text = "Electra Colour Picker";
             ((System.ComponentModel.ISupportInitialize)(this.picSelectedColour)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrev1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrev2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrev3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrev4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrev5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -115,6 +185,11 @@
         private System.Windows.Forms.Button btnSendColour;
         private System.Windows.Forms.ComboBox cmbSerialPorts;
         private System.Windows.Forms.Button btnConnect;
+        private System.Windows.Forms.PictureBox pbPrev1;
+        private System.Windows.Forms.PictureBox pbPrev2;
+        private System.Windows.Forms.PictureBox pbPrev3;
+        private System.Windows.Forms.PictureBox pbPrev4;
+        private System.Windows.Forms.PictureBox pbPrev5;
     }
 }
 
